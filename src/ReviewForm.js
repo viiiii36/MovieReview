@@ -21,7 +21,11 @@ const ReviewForm = () => {
       setReviews([...reviews, formData]);
       setFormData({ comment: '', rating: '' });
     };
-    /*component Stars being rendered: receives a prop onRate =function (handleRate) called when a user rates something.
+    /*component Stars being rendered: receives a prop onRate =function (handleRate) called when a user rates something
+    The onRate prop is passed, handleRate function (above) will be called when the user clicking on stars to rate
+    The onSubmit event handler for the form is set to handleSubmit function
+    The value of the textarea is from the formData.comment state variable
+    When the value of the textarea changes, it triggers the setFormData function = updating the comment property of the formData state object with the new value.
     */
     return (
       <div className="container">
